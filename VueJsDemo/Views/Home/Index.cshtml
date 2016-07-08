@@ -1,0 +1,23 @@
+﻿<div class="row" id="main">
+    <div class="col-md-6 col-md-offset-3 well">
+        <input type="text" class="form-control" v-model="message" />
+        <p>{{message}}</p>
+        <button class="btn btn-primary" v-on:click="reverse">Reverse</button>
+    </div>
+    <div class="col-md-6 col-md-offset-3 well">
+        <button class="btn btn-primary" v-on:click="addNumber">Add</button>
+        <button class="btn btn-success" v-on:click="sort">Sort</button>
+        <ul>
+            <template v-for="number in numbers"> <!-- foreach(var number in numbers) -->
+                <li style="font-size: 20px;">{{number}}</li>
+            </template> 
+        </ul>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script src="~/Scripts/index.js"></script>
+}
+
